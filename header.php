@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Главная страница</title>
+<title><?php wp_title("",true); ?></title>
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic&subset=cyrillic-ext' rel='stylesheet' type='text/css'>
 <!-- jQuery library (served from Google) -->
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.js"></script>
 <!-- Slider Javascript file -->
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.smslider.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.mb.browser.js"></script>
@@ -17,4 +17,5 @@ $(document).ready(function(){
 	$('#sm_slider').smSlider()
 })
 </script>
+<?php wp_head(); ?>
 </head>

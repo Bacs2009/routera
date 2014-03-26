@@ -57,13 +57,19 @@ if ( have_comments() ) : ?>
 	<?php endif; ?>
 
 <?php endif; ?>
-
-<?php if ('open' == $post->comment_status) : ?>
 <img class="divide_line" src="<?php bloginfo('template_url'); ?>/img/divide_line_hor.png" />
+<br/><br/><br/>
+<?php if ('open' == $post->comment_status) : ?>
+
 
 <!--ФОРМА ВВОДА-->
+<?php if ( $user_ID ) : ?>
+<?php $height = "400px;"?>
+<?php else : ?>
+<?php $height = "500px"; $paddingLeft = "64px"; $width = "800px";?>
+<?php endif; ?>
 
-<div id="respond">
+<div id="respond" style="height:<?=$height;?>; width:<?=$width?>; padding-left:<?=$paddingLeft?>;">
 
 <h2>
 <?php comment_form_title( 'Оставьте комментарий', 'Оставьте комментарий на %s' ); ?>
@@ -98,7 +104,7 @@ if ( have_comments() ) : ?>
 <?php endif; ?>
 
 <p>
-<textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4">
+<textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4" placeholder="Добавить комментарий">
 </textarea>
 </p>
 

@@ -1,5 +1,5 @@
 <div id="sidebar2" style="background-image:url(<?php bloginfo('template_url'); ?>/img/divide_line.png);">
-	<h2>НОВОСТИ</h2><img class="news_icon" src="<?php bloginfo('template_url'); ?>/img/news_icon.png" />
+	<a href="<?php echo home_url('/news');?>"><h2>НОВОСТИ</h2></a><img class="news_icon" src="<?php bloginfo('template_url'); ?>/img/news_icon.png" />
 	<?php query_posts('category_name=Новости&showposts=3'); ?>
 	<?php while (have_posts()) : the_post(); ?>
 	<h4><?php echo get_the_date( 'Y-m-d' ); ?></h4>
